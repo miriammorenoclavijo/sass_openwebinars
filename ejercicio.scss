@@ -1,0 +1,75 @@
+
+//variables de colores
+$grey: #bbbbbb;
+$header-background: $grey;
+$link-normal: #000;
+$link-visited: #00f;
+$link-active: #0f0;
+
+/*Elementos de 
+la cabecera*/
+.header {
+  background-color: $header-background;
+}
+
+//listas - tamaños para los iconos
+$sizes: (
+    40px, 
+    80px, 
+    160px);
+
+//mapas- breakpoints para la página
+$breakpoint: (
+    "pequeño": 576,
+    "medio": 768,
+    "grande": 992
+);
+
+//interpolación en selectores
+$button-type: "error";
+$btn-color: #f00;
+
+.btn-#{$button-type} {
+    background-color: $btn-color;
+}
+//interpolación en uso de funciones
+$fondo: "img/fondos/default.png";
+
+.container {
+    background-image: url('#{$fondo}');
+}
+
+//anidamiento de menu
+
+nav{
+    li{
+        a{
+            &:hover{
+
+            }
+        }
+    }
+}
+
+//anidamiento con sufijo
+.btn {
+    &_warning {
+
+    }
+}
+
+//anidamiento básico
+
+a {
+ color: $link-normal;
+ text-decoration: none;
+ &:hover {
+     color: $link-hover;
+ }
+ &:visited {
+     color: $link-visited;
+ }
+ &:active {
+     color: $link-active;
+ }
+}
